@@ -1,0 +1,225 @@
+:root {
+  --bg: #050605;
+  --panel: #0b0e0b;
+  --neon: #39ff14;
+  --amber: #ffbf00;
+  --trace: #c27b2b;
+  --text: #a9ff98;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  color: var(--text);
+  background: radial-gradient(circle at top, #101710, #020302 65%);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.crt {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 2rem;
+  border: 2px solid #202620;
+  box-shadow: 0 0 0 4px #090b09, 0 20px 80px rgba(0, 0, 0, 0.7), inset 0 0 100px rgba(57, 255, 20, 0.07);
+  overflow: hidden;
+  background: linear-gradient(180deg, #050705, #000);
+}
+
+.scanlines {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 3px,
+    transparent 5px
+  );
+  mix-blend-mode: screen;
+  z-index: 3;
+}
+
+.bezel {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 4;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.red {
+  color: #ff3d5d;
+  background: #ff3d5d;
+}
+
+.amber {
+  color: var(--amber);
+  background: var(--amber);
+}
+
+.terminal-shell {
+  position: relative;
+  padding: 1.5rem;
+  background:
+    linear-gradient(rgba(57, 255, 20, 0.08), rgba(57, 255, 20, 0.04)),
+    repeating-linear-gradient(to right, rgba(57, 255, 20, 0.08) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(to bottom, rgba(57, 255, 20, 0.08) 0 1px, transparent 1px 80px),
+    var(--bg);
+}
+
+.boot-log {
+  min-height: 140px;
+  max-height: 180px;
+  overflow: hidden;
+  color: var(--neon);
+  opacity: 0.85;
+  line-height: 1.2;
+  font-size: 0.84rem;
+  border-left: 1px solid rgba(57, 255, 20, 0.3);
+  padding-left: 0.75rem;
+}
+
+.hero {
+  margin-top: 1rem;
+}
+
+.ascii-title {
+  margin: 0;
+  white-space: pre;
+  color: var(--neon);
+  font-size: clamp(0.45rem, 1.1vw, 0.88rem);
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.5);
+}
+
+.tagline {
+  margin: 1rem 0;
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--bg);
+  background: var(--neon);
+  padding: 0.5rem 0.9rem;
+  font-weight: 700;
+  border: 1px solid var(--neon);
+}
+
+.circuit-bg {
+  width: 100%;
+  height: 240px;
+  opacity: 0.75;
+  margin: 0.5rem 0 1rem;
+}
+
+.trace-group path,
+.trace-group circle {
+  fill: none;
+  stroke: var(--trace);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 4px rgba(194, 123, 43, 0.7));
+  animation: pulse 3.8s ease-in-out infinite;
+}
+
+.trace-group circle {
+  fill: var(--trace);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.command {
+  color: var(--neon);
+  text-decoration: none;
+  border: 1px solid rgba(57, 255, 20, 0.6);
+  padding: 0.6rem;
+  text-align: center;
+  transition: box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.command:hover,
+.command:focus {
+  box-shadow: 0 0 10px var(--neon), inset 0 0 12px rgba(57, 255, 20, 0.2);
+  background: rgba(57, 255, 20, 0.08);
+}
+
+.panel {
+  margin: 1rem 0;
+  border: 1px solid rgba(57, 255, 20, 0.24);
+  background: var(--panel);
+  padding: 0.8rem;
+}
+
+h2,
+h3,
+a {
+  color: var(--neon);
+}
+
+.columns,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.project-grid article,
+.columns article {
+  border: 1px dashed rgba(57, 255, 20, 0.35);
+  padding: 0.7rem;
+}
+
+.terminal-prompt {
+  margin-top: 1.2rem;
+  border-top: 1px solid rgba(57, 255, 20, 0.3);
+  padding-top: 0.8rem;
+}
+
+.cursor {
+  animation: blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0.6rem;
+  }
+
+  .terminal-shell {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhananjay Singh | EEE Terminal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="crt">
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="bezel" aria-hidden="true">
+        <span class="indicator red"></span>
+        <span class="indicator amber"></span>
+      </div>
+
+      <div class="terminal-shell">
+        <header class="boot-log" id="bootLog" aria-label="System boot log"></header>
+
+        <main>
+          <section class="hero">
+            <pre class="ascii-title" aria-label="Title">
+ ____  _   _    _    _   _    _    _   _      _ __   __
+|  _ \| | | |  / \  | \ | |  / \  | \ | |    / \\ \ / /
+| | | | |_| | / _ \ |  \| | / _ \ |  \| |   / _ \\ V /
+| |_| |  _  |/ ___ \| |\  |/ ___ \| |\  |  / ___ \| |
+|____/|_| |_/_/   \_\_| \_/_/   \_\_| \_| /_/   \_\_|
+
+  S I N G H  |  E E E _ E N G I N E E R  // _
+            </pre>
+            <p class="tagline">
+              Building intelligent systems using IoT, Robotics &amp; Embedded Tech.
+            </p>
+            <a href="#projects" class="cta">[ VIEW PROJECTS ]</a>
+          </section>
+
+          <svg class="circuit-bg" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true">
+            <g class="trace-group">
+              <path d="M20 120 H240 V260 H420 V140 H620" />
+              <path d="M220 20 V180 H390 V350 H760" />
+              <path d="M580 70 H860 V200 H1080" />
+              <path d="M780 460 V320 H1040 V90" />
+              <path d="M40 420 H340 V460 H520" />
+              <circle cx="240" cy="260" r="6" />
+              <circle cx="620" cy="140" r="6" />
+              <circle cx="860" cy="200" r="6" />
+              <circle cx="390" cy="350" r="6" />
+              <circle cx="1040" cy="90" r="6" />
+            </g>
+          </svg>
+
+          <nav class="command-grid" aria-label="Terminal commands">
+            <a href="#about" class="command">[ CAT ABOUT ]</a>
+            <a href="#skills" class="command">[ HELP --SKILLS ]</a>
+            <a href="#projects" class="command">[ LS PROJECTS ]</a>
+            <a href="#experience" class="command">[ SHOW LEARNING ]</a>
+            <a href="#achievements" class="command">[ VIEW HIGHLIGHTS ]</a>
+            <a href="#contact" class="command">[ GET CONTACT ]</a>
+          </nav>
+
+          <section id="about" class="panel">
+            <h2>&gt; ABOUT</h2>
+            <p>
+              I am Dhananjay Singh, an Electrical &amp; Electronics Engineering student focused on
+              real-world problem solving using hardware + software integration.
+            </p>
+            <p>
+              I work on automation, smart systems, and simulation-driven engineering workflows.
+              I like building systems that interact with the real world, not just code on screen.
+            </p>
+          </section>
+
+          <section id="skills" class="panel">
+            <h2>&gt; CORE SKILLS</h2>
+            <div class="columns">
+              <article>
+                <h3>IoT Development</h3>
+                <p>Sensors, microcontrollers, and connectivity over WiFi/Bluetooth.</p>
+              </article>
+              <article>
+                <h3>Robotics</h3>
+                <p>Automation logic, control systems, and hardware integration.</p>
+              </article>
+              <article>
+                <h3>Embedded Systems</h3>
+                <p>Arduino/ESP workflows and low-level programming approaches.</p>
+              </article>
+              <article>
+                <h3>MATLAB &amp; Simulation</h3>
+                <p>System modeling, circuit simulation, and algorithm testing.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="projects" class="panel">
+            <h2>&gt; PROJECT LOGS</h2>
+            <div class="project-grid">
+              <article>
+                <h3>Smart Energy Monitor Node</h3>
+                <p><strong>Problem:</strong> Needed real-time usage visibility for lab devices.</p>
+                <p><strong>Tech:</strong> IoT + Embedded (ESP32, current sensor, MQTT).</p>
+                <p><strong>Outcome:</strong> Working prototype that streams power metrics to dashboard.</p>
+                <a href="#" aria-label="Energy monitor repository">GitHub / Demo</a>
+              </article>
+              <article>
+                <h3>Line-Following Inspection Bot</h3>
+                <p><strong>Problem:</strong> Manual inspection loops were repetitive and slow.</p>
+                <p><strong>Tech:</strong> Robotics + control logic + sensor fusion.</p>
+                <p><strong>Outcome:</strong> Stable autonomous path tracking in test environment.</p>
+                <a href="#" aria-label="Inspection bot repository">GitHub / Demo</a>
+              </article>
+              <article>
+                <h3>Motor Control Simulation Suite</h3>
+                <p><strong>Problem:</strong> Compare controller responses before hardware deployment.</p>
+                <p><strong>Tech:</strong> MATLAB/Simulink + control system analysis.</p>
+                <p><strong>Outcome:</strong> Simulation reports used to optimize tuning parameters.</p>
+                <a href="#" aria-label="Motor control simulation repository">GitHub / Demo</a>
+              </article>
+            </div>
+          </section>
+
+          <section id="experience" class="panel">
+            <h2>&gt; EXPERIENCE / LEARNING</h2>
+            <ul>
+              <li>Coursework and self-learning in embedded systems, IoT workflows, and control systems.</li>
+              <li>Hands-on toolchain: Arduino IDE, MATLAB, and basic C/C++ / Python programming.</li>
+              <li>Continuous prototype iteration with simulation-first and testbench-driven approach.</li>
+            </ul>
+          </section>
+
+          <section id="achievements" class="panel">
+            <h2>&gt; ACHIEVEMENTS</h2>
+            <ul>
+              <li>Participation in technical competitions and engineering build challenges.</li>
+              <li>Certifications and workshops across automation and embedded application domains.</li>
+              <li>Real-world implementation mindset focused on measurable system outcomes.</li>
+            </ul>
+          </section>
+
+          <section id="contact" class="panel">
+            <h2>&gt; CONTACT</h2>
+            <p>Email: <a href="mailto:dhananjay@example.com">dhananjay@example.com</a></p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/dhananjay-singh</a></p>
+            <p>GitHub: <a href="#">github.com/dhananjay-singh</a></p>
+          </section>
+        </main>
+
+        <footer class="terminal-prompt">
+          <span>USER@EEE_TERMINAL:~&gt;</span> <span class="cursor" aria-hidden="true">_</span>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
